@@ -158,59 +158,74 @@ a:hover {
 /* Imagen avatar */
 .hero-image-col {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .hero-avatar {
-  max-width: 320px;
   width: 100%;
+  max-width: 300px;
   display: block;
   filter: grayscale(10%);
 }
 
-/* Responsive hero */
-@media (min-width: 992px) {
-  .hero-image-col {
-    justify-content: flex-end;
-    margin-top: 0;
-  }
+/* ---- Responsive hero ---- */
 
+/* Desktop lg+ (≥992px) */
+@media (min-width: 992px) {
   .hero-avatar {
     max-width: 300px;
   }
 }
 
+/* Tablet sm–lg (576px – 991px): 2 columnas, imagen más pequeña */
 @media (max-width: 991px) {
   #hero {
     padding: 3rem 0 2.5rem;
   }
 
   .hero-title {
-    font-size: clamp(1.2rem, 5vw, 1.8rem);
-  }
-
-  .hero-image-col {
-    justify-content: flex-end;
+    font-size: clamp(1rem, 3.5vw, 1.6rem);
   }
 
   .hero-avatar {
-    max-width: 200px;
+    max-width: 220px;
   }
 }
 
-@media (max-width: 575px) {
+/* Mobile sm (576px – 767px) */
+@media (max-width: 767px) {
   .hero-title {
-    font-size: 0.9rem;
+    font-size: clamp(0.85rem, 3vw, 1.2rem);
+  }
+
+  .hero-avatar {
+    max-width: 160px;
   }
 
   .hero-desc {
     font-size: 1.1rem;
   }
+}
+
+/* Phone xs (< 576px): título izq, imagen der, desc+botones full width abajo */
+@media (max-width: 575px) {
+  #hero {
+    padding: 2rem 0 2rem;
+  }
+
+  .hero-title {
+    font-size: 0.72rem;
+    line-height: 1.8;
+  }
 
   .hero-avatar {
-    max-width: 140px;
+    max-width: 120px;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    max-width: 100%;
   }
 }
 
@@ -652,63 +667,6 @@ a:hover {
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0; }
-}
-
-/* Hero mobile: título + imagen en misma fila, descripción y botones abajo */
-@media (max-width: 767px) {
-  #hero .row {
-    flex-wrap: wrap;
-  }
-
-  #hero .hero-text {
-    order: 2;
-    width: 100%;
-  }
-
-  #hero .hero-image-col {
-    order: 1;
-    width: 100%;
-    justify-content: flex-end;
-    margin-bottom: 0.5rem;
-  }
-}
-
-/* Phone: título a la izquierda, imagen a la derecha, side by side */
-@media (max-width: 575px) {
-  #hero > .container-fluid > .row {
-    flex-direction: row !important;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-  }
-
-  #hero .hero-text {
-    order: 1;
-    flex: 1;
-    min-width: 0;
-  }
-
-  #hero .hero-title {
-    font-size: 0.75rem;
-  }
-
-  #hero .hero-image-col {
-    order: 2;
-    flex: 0 0 140px;
-    width: 140px;
-    margin-top: 0;
-    margin-bottom: 0;
-    justify-content: flex-end;
-    align-items: flex-start;
-  }
-
-  #hero .hero-avatar {
-    max-width: 130px;
-  }
-
-  #hero .hero-desc {
-    font-size: 1rem;
-    max-width: 100%;
-  }
 }
 
 /* Hover en tarjetas de proyecto */
