@@ -160,6 +160,12 @@ a:hover {
   padding-left: 5rem;
 }
 
+@media (min-width: 992px) {
+  .hero-text-col {
+    padding-left: 9rem;
+  }
+}
+
 /* Imagen avatar */
 .hero-image-col {
   display: flex;
@@ -213,7 +219,7 @@ a:hover {
   }
 }
 
-/* Phone xs (< 576px): título izq, imagen der, desc+botones full width abajo */
+/* Phone xs (< 576px) */
 @media (max-width: 575px) {
   #hero {
     padding: 2rem 0 2rem;
@@ -229,8 +235,14 @@ a:hover {
   }
 
   .hero-desc {
-    font-size: 1rem;
+    font-size: 0.85rem;
     max-width: 100%;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    font-size: 0.45rem;
+    padding: 0.5rem 0.8rem;
   }
 }
 
