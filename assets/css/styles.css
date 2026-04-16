@@ -1,0 +1,84 @@
+/* ============================================
+   ANI MORALES PORTFOLIO — CUSTOM STYLES
+   ============================================ */
+
+/* --------------------------------------------
+   1. VARIABLES
+   -------------------------------------------- */
+:root {
+  --color-bg:       #000000;
+  --color-white:    #FFFFFF;
+  --color-accent:   #2EE7BB;
+  --color-cream:    #F2EEE9;
+  --color-gray:     #BABABA;
+
+  --font-pixel:     'Press Start 2P', monospace;
+  --font-body:      'VT323', monospace;
+}
+
+/* --------------------------------------------
+   2. RESET & BASE
+   -------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------
+   3. TIPOGRAFÍA BASE
+   -------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-pixel);
+  color: var(--color-white);
+}
+
+p, li, span, a {
+  font-family: var(--font-body);
+}
+
+a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* --------------------------------------------
+   4. UTILIDADES
+   -------------------------------------------- */
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-gray {
+  color: var(--color-gray);
+}
+
+.text-cream {
+  color: var(--color-cream);
+}
+
+.font-pixel {
+  font-family: var(--font-pixel);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
