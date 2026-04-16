@@ -625,7 +625,93 @@ a:hover {
 }
 
 /* --------------------------------------------
-   9. NAVBAR
+   9. POLISH & DETALLES FINALES
+   -------------------------------------------- */
+
+/* Scroll offset para navbar fijo */
+#proyectos,
+#sobre-contacto {
+  scroll-margin-top: 70px;
+}
+
+/* Cursor parpadeante retro */
+.cursor-blink {
+  display: inline-block;
+  color: var(--color-white);
+  animation: blink 1s step-end infinite;
+  font-size: 1em;
+  line-height: 1;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Hero mobile: imagen a la derecha del título */
+@media (max-width: 991px) {
+  #hero .row {
+    flex-wrap: wrap;
+  }
+
+  #hero .hero-text {
+    order: 2;
+    width: 100%;
+  }
+
+  #hero .hero-image-col {
+    order: 1;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero .row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #hero .hero-text {
+    order: 1;
+    width: calc(100% - 180px);
+  }
+
+  #hero .hero-image-col {
+    order: 1;
+    width: 160px;
+    margin-bottom: 0;
+    align-self: flex-start;
+  }
+
+  #hero .hero-buttons {
+    order: 2;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Hover en tarjetas de proyecto */
+.file-window:hover,
+.project-card:hover {
+  border-color: var(--color-accent);
+  transition: border-color 0.2s;
+}
+
+/* Cursor personalizado retro */
+* {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpolygon points='0,0 0,12 3,9 6,16 8,15 5,8 9,8' fill='white' stroke='black' stroke-width='1'/%3E%3C/svg%3E") 0 0, auto;
+}
+
+a, button, .btn, .file-window__controls span {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpolygon points='0,0 0,12 3,9 6,16 8,15 5,8 9,8' fill='%232EE7BB' stroke='black' stroke-width='1'/%3E%3C/svg%3E") 0 0, pointer;
+}
+
+/* --------------------------------------------
+   10. NAVBAR
    -------------------------------------------- */
 #navbar {
   background-color: var(--color-bg);
