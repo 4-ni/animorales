@@ -478,7 +478,154 @@ a:hover {
 }
 
 /* --------------------------------------------
-   7. SOBRE MI + CONTACTO
+   7. ANÁLISIS DE CASO
+   -------------------------------------------- */
+#analisis-caso {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--color-white);
+}
+
+#analisis-caso {
+  scroll-margin-top: 70px;
+}
+
+/* Hero del caso */
+.caso-hero {
+  border: 2px solid var(--color-white);
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.caso-hero__label {
+  font-family: var(--font-pixel);
+  font-size: 0.45rem;
+  color: var(--color-accent);
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.caso-hero__title {
+  font-family: var(--font-pixel);
+  font-size: clamp(0.7rem, 2vw, 1.1rem);
+  color: var(--color-white);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.caso-hero__desc {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--color-cream);
+  margin-bottom: 1.2rem;
+  max-width: 800px;
+}
+
+/* Filas del caso */
+.caso-row {
+  margin-bottom: 2rem;
+  align-items: stretch;
+}
+
+/* Bloques de texto */
+.caso-block {
+  border: 2px solid var(--color-white);
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.caso-block--accent {
+  border-color: var(--color-accent);
+}
+
+.caso-block__label {
+  font-family: var(--font-pixel);
+  font-size: 0.45rem;
+  color: var(--color-accent);
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+
+.caso-text {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--color-cream);
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.caso-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.caso-list li {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--color-cream);
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-gray);
+  line-height: 1.5;
+}
+
+/* Imágenes del proceso */
+.caso-img-wrapper {
+  border: 2px solid var(--color-white);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.caso-img {
+  width: 100%;
+  display: block;
+  flex: 1;
+  object-fit: cover;
+  filter: saturate(75%);
+  transition: filter 0.2s;
+}
+
+.caso-img-wrapper:hover .caso-img {
+  filter: saturate(100%);
+}
+
+/* Métricas */
+.caso-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.caso-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--color-gray);
+  padding: 1rem 1.5rem;
+  min-width: 120px;
+  flex: 1;
+}
+
+.caso-metric__num {
+  font-family: var(--font-pixel);
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.caso-metric__label {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-gray);
+  text-align: center;
+}
+
+/* --------------------------------------------
+   8. SOBRE MI + CONTACTO
    -------------------------------------------- */
 #sobre-contacto {
   padding: 4rem 0;
